@@ -1,0 +1,154 @@
+/* Home.css */
+.home-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+.home-header {
+    background-image: url('https://example.com/your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+.home-header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.home-header p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.explore-button {
+    display: inline-block;
+    background-color: #ff6f61;
+    padding: 15px 30px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+    background-color: #e55947;
+}
+
+.home-services {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: white;
+    padding: 30px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.home-footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+    .home-header h1 {
+        font-size: 36px;
+    }
+
+    .home-header p {
+        font-size: 18px;
+    }
+
+    .explore-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+}
+
+/* For mobile (480px and below) */
+@media (max-width: 480px) {
+    .home-header {
+        padding: 80px 20px;
+    }
+
+    .home-header h1 {
+        font-size: 28px;
+    }
+
+    .home-header p {
+        font-size: 16px;
+    }
+
+    .explore-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .home-footer p {
+        font-size: 14px;
+    }
+}
