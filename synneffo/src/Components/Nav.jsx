@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
-          Trippify
+          Bright learners
         </a>
         <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <ul className="navbar-items">
@@ -22,20 +22,22 @@ const Navbar = () => {
               </a>
             </li>
             <li className="navbar-item">
-              <a href="/destinations" className="navbar-links">
-                Destinations
+              <a href="/Aboutus" className="navbar-links">
+                About Us
               </a>
             </li>
-            <li className="navbar-item">
-              <a href="/packages" className="navbar-links">
-                Packages
+            <li className="navbar-item dropdown">
+              <a href="/courses" className="navbar-links">
+                Courses
               </a>
+              <ul className="dropdown-menu">
+                <li><a href="/courses/web" className="dropdown-link">Web Development</a></li>
+                <li><a href="/courses/data" className="dropdown-link">Data Science</a></li>
+                <li><a href="/courses/design" className="dropdown-link">UI/UX Design</a></li>
+              </ul>
             </li>
-            <li className="navbar-item">
-              <a href="/reviews" className="navbar-links">
-                Reviews
-              </a>
-            </li>
+
+           
             <li className="navbar-item">
               <a href="/contact" className="navbar-links">
                 Contact

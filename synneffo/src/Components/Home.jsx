@@ -5,32 +5,30 @@ const Home = () => {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Welcome to Trippify</h1>
-        <p>Your dream destination is just a click away.</p>
-        <a href="/destinations" className="explore-button">Explore Destinations</a>
+        <h1>Welcome to Bright Future Institution</h1>
+        <p>Your path to success starts here with quality education and expert guidance.</p>
+        <a href="/courses" className="explore-button">Explore Courses</a>
       </header>
 
       <section className="home-services">
-        <h2 className="section-title">Our Services</h2>
+        <h2 className="section-title">What We Offer</h2>
         <div className="services-container">
           <div className="service-card">
-            <h3>Customized Packages</h3>
-            <p>Choose from a range of customized travel packages for a perfect trip.</p>
+            <h3>Career-Focused Courses</h3>
+            <p>We offer hands-on training in Web Development, Data Science, Design, and more.</p>
           </div>
           <div className="service-card">
-            <h3>Trusted Reviews</h3>
-            <p>Read reviews from travelers to help you make the best decision.</p>
+            <h3>Student Reviews</h3>
+            <p>Hear from students who transformed their careers through Bright Future.</p>
           </div>
           <div className="service-card">
-            <h3>24/7 Support</h3>
-            <p>Get support anytime, anywhere to ensure a seamless travel experience.</p>
+            <h3>24/7 Guidance</h3>
+            <p>Access mentorship and support anytime throughout your learning journey.</p>
           </div>
         </div>
       </section>
 
-      <section className="home-footer">
-        <p>© 2025 Trippify. All Rights Reserved.</p>
-      </section>
+     
     </div>
   );
 };

@@ -1,0 +1,48 @@
+.aboutus-container {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .aboutus-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .aboutus-header h1 {
+    font-size: 36px;
+    color: #ff6f61;
+  }
+  
+  .aboutus-header p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .aboutus-content .aboutus-section {
+    margin-bottom: 30px;
+  }
+  
+  .aboutus-section h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .aboutus-section p,
+  .aboutus-section ul {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .aboutus-section ul {
+    padding-left: 20px;
+  }
+  
+  .aboutus-section ul li {
+    margin-bottom: 8px;
+  }
+  
