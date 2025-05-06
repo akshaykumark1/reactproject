@@ -1,34 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Courses.css';
 
 const Courses = () => {
-  const courses = [
-    {
-      title: "Web Development",
-      description: "Master HTML, CSS, JavaScript, and modern frameworks like React and Node.js.",
-      duration: "12 weeks"
-    },
-    {
-      title: "Data Science",
-      description: "Learn Python, data analysis, machine learning, and real-world project building.",
-      duration: "16 weeks"
-    },
-    {
-      title: "UI/UX Design",
-      description: "Design user-friendly interfaces with tools like Figma, Adobe XD, and more.",
-      duration: "10 weeks"
-    },
-    {
-      title: "Digital Marketing",
-      description: "Boost business growth with SEO, social media, content, and analytics.",
-      duration: "8 weeks"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Understand ethical hacking, risk management, and network security essentials.",
-      duration: "14 weeks"
-    },
-  ];
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/courses/')
+      .then(response => {
+        setCourses(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching courses:", error);
+      });
+  }, []);
 
   return (
     <div className="courses-container">
@@ -36,10 +22,12 @@ const Courses = () => {
       <div className="courses-grid">
         {courses.map((course, index) => (
           <div className="course-card" key={index}>
-            <h2>{course.title}</h2>
+            <h2>{course.name}</h2>
             <p>{course.description}</p>
-            <span className="course-duration">Duration: {course.duration}</span>
-            <a href="/enroll" className="enroll-button">Enroll Now</a>
+            {course.duration && (
+              <p><strong>Duration:</strong> {course.duration}</p>
+            )}
+            <Link to={`/courses/${course.id}`} className="enroll-button">Enroll Now</Link>
           </div>
         ))}
       </div>
